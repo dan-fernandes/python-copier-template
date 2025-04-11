@@ -14,6 +14,7 @@ jobs:
           path: dist
 
       - name: Publish to PyPI using trusted publishing
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          attestations: false
+        # uses: pypa/gh-action-pypi-publish@release/v1
+        # with:
+        #   attestations: false
+        run: echo Publishing to PyPI

@@ -47,7 +47,7 @@ jobs:
             type=raw,value=latest
 
       - name: Push cached image to container registry
-        if: github.ref_type == 'tag'
+        if: needs.test.result && github.ref_type == 'tag'
         uses: docker/build-push-action@v6
         env:
           DOCKER_BUILD_RECORD_UPLOAD: false

@@ -9,10 +9,6 @@ on:
         type: string
         description: The runner to run this job on
         required: true
-    outputs:
-      test-result:
-        description: Result of test run job
-        value: ${{ jobs.run.result }}
     secrets:
       CODECOV_TOKEN:
         required: true
